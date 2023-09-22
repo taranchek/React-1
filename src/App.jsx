@@ -134,13 +134,216 @@ import './App.css'
 // }
 
 
-function App() {
-	const obj = {name: 'john', surname: 'smit'};
-  return (<div>
-    <p>name:{obj.name}</p>
-      <br> </br>
-    <p>surname:{obj.surname}</p>
-  </div>)
+
+// 16
+// function App() {
+// 	const obj = {name: 'john', surname: 'smit'};
+//   return (<div>
+//     <p>name: {obj.name}
+//     <br></br>
+//     surname: {obj.surname}</p>
+//   </div>)
+// }
+
+
+// 17
+// function App() {
+// 	const attr = 'block';
+	
+// 	return <div id={attr}>
+// 		text
+// 	</div>;
+// }
+
+
+
+// 19
+// function App() {
+// 	const li1 = <div><li>text1</li><li>text2</li><li>text3</li></div>;
+
+//   return <main>
+//   {li1}
+//   </main>;
+// }
+
+
+
+// 20
+// function App() {
+// 	const items = <div><li>text1</li>
+//   <li>text2</li>
+//   <li>text3</li>
+//   </div>
+	
+// 	return <ul>
+// 		{items}
+// 	</ul>
+// }
+
+
+
+// 22
+// function App() {
+// 	return <div>
+// 		<input />
+//     <br />
+//     <input />
+//     <br />
+//     <input />
+//     <br />
+//     <input />
+// 	</div>;
+// }
+
+
+
+
+// 23.1 23.2
+// function App() {
+// 	return <div>
+// 		<ul>
+//       <li>12</li>
+//       <li>12</li>
+//       <li>12</li>
+//       <li>12</li>
+//       <li>12</li>
+//       <li>12</li>
+//       <li>12</li>
+//       <li>12</li>
+//       <li>12</li>
+//       <li>12</li>
+//     </ul>
+// 	</div>;
+// }
+
+// function App() {
+// 	return <div>
+// 		<tbody>
+// 			<tr>
+// 				<td>1</td>
+// 				<td>2</td>
+//         <td>3</td>
+// 			</tr>
+// 			<tr>
+// 				<td>4</td>
+// 				<td>5</td>
+//         <td>6</td>
+// 			</tr>
+//       <tr>
+// 				<td>7</td>
+// 				<td>8</td>
+//         <td>9</td>
+// 			</tr>
+// 		</tbody>
+// 	</div>;
+// }
+
+
+
+
+// 24.1 
+// function App() {
+// 	const num1 = 3;
+// 	const num2 = 2;
+	
+// 	return <div>
+// 		result: {num1 ** num2}
+// 	</div>;
+// } 
+// HTML: result: 9
+
+// 24.2
+// function App() {
+// 	const name = 'john';
+// 	const surname = 'smit';
+	
+// 	return <div>
+// 		result: {name + ' ' + surname}
+// 	</div>;
+// }
+// HTML: result: john smit
+
+
+
+// 24.3
+// function App() {
+// 	const num = 4;
+	
+// 	return <div>
+// 		result: {Math.sqrt(num)}
+// 	</div>;
+// }
+// HTML: result: 2
+
+
+
+
+// 26
+// function App() {
+//   let text;
+// 	const isAdult = false;
+	
+// 	if (isAdult) {
+// 		text = <p>Ура, пользователь уже совершеннолетний</p>;
+// 	} else {
+// 		text = <p>Усп, повторите попытку когда вам будет 18</p>;
+// 	}
+	
+// 	return <div>
+// 		{text}
+// 	</div>;
+// }
+
+
+
+
+// 27
+// function App() {
+// 	const age = 16;
+	
+// 	return <div>
+// 		{age >= 18 ? <p>Ура, пользователь уже совершеннолетний</p> : <p>Усп, повторите попытку когда вам будет 18</p>}
+// 	</div>;
+// }
+
+
+
+// 28
+// function App() {
+// 	const isAuth = false;
+	
+// 	return <div>
+// 		{isAuth && <p>вы авторизованы</p>}
+// 	</div>;
+// }
+
+
+
+// 29
+// function App() {
+// 	const isAuth = false;
+	
+// 	return <div>
+// 		{!isAuth && <p>пожалуйста, авторизуйтесь</p>}
+// 	</div>;
+// }
+
+
+
+
+// 30
+function getDigitsSum(number) {
+  if (number < 10) {
+    return number;
+
+  return (number % 10) + getDigitsSum(Math.floor(number / 10));  
 }
 
+	function app() {
+		const number = 123;
+    const sum = getDigitsSum(number)
+    return {sum};
+	}
+	
+}
 export default App
